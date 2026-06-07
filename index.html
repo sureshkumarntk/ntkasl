@@ -63,8 +63,10 @@ body{
 .nav-links{
     display:flex;
     list-style:none;
+    margin:0;
+    padding:0;
 }
-
+    
 .nav-links li{
     margin-left:25px;
 }
@@ -91,7 +93,7 @@ body{
    HERO
 ========================= */
 .hero{
-    height:100vh;
+    min-height:calc(100vh - 80px);
     background:
         linear-gradient(rgba(15,23,42,0.75),
         rgba(15,23,42,0.75)),
@@ -105,7 +107,7 @@ body{
     color:white;
     padding:20px;
 }
-
+   
 .hero-content{
     max-width:850px;
 }
@@ -162,18 +164,7 @@ section{
     color:var(--gray);
     margin-top:10px;
 }
-<section id="about-details">
 
-<h2>Detailed Laboratory Information</h2>
-
-<p>
-NTK operates on state-of-the-art research, testing, diagnostics, and scientific innovation.
-    It has more than 2 decades of research in developing new products which could be 
-    used in Aerospace, Space applications, Medical research, Pharmaceutical formulations
-    and environmental conservation.
-</p>
-
-</section>
     
 /* =========================
    ABOUT
@@ -364,9 +355,9 @@ footer{
 <body>
 
 <!-- HEADER -->
-<header>
+<header class="header">
     <nav class="navbar">
-        <div class="logo”>NTK Advanced Sciences<span>Lab</span></div>
+        <div class="logo">NTK Advanced Sciences<span>Lab</span></div>
 
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
@@ -384,8 +375,8 @@ footer{
 <section class="hero">
     <div class="hero-content">
         <h1>Advancing Science Through Innovation</h1>
-        /* below image commented for overlap */
-        /*<img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1000&q=80" alt="Laboratory">*/
+        <!-- below image commented for overlap
+        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1000&q=80" alt="Laboratory"> -->
         <p>
             Delivering world-class laboratory research,
             advanced new materials, and scientific solutions with cutting-edge technology.
@@ -403,9 +394,9 @@ footer{
         </div>
 
         <div class="about">
-          /* commenting out for overlap
+           <!-- commenting out for overlap
             <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1000&q=80" alt="Laboratory">
-*/
+-->
             <div class="about-text">
                 <h3>Trusted Scientific Research Partner</h3>
 
@@ -562,11 +553,7 @@ footer{
 function toggleMenu() {
     document.getElementById("navLinks").classList.toggle("active");
 }
-const menuBtn = document.getElementById("menuBtn");
-const navMenu = document.querySelector(".nav-menu");
 
-menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
 });
 </script>
 
